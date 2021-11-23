@@ -1,0 +1,27 @@
+<?php
+function note_schema() {
+  $schema['note'] = array(
+    'fields' => array(
+      'id'=>array(
+        'type'=>'serial',
+        'not null' => TRUE,
+      ),
+      'title'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'time'=>array(
+        'type' => 'datetime',
+        'not null' => TRUE,
+      ),
+      'text'=>array(
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}

@@ -1,0 +1,23 @@
+note.note_controller_listing:
+  path: "note"
+  defaults:
+    _controller: 'Drupal\note\Controller\NoteController::Listing'
+    _title: "Listing Records"
+  requirements:
+    _permission: "access content"
+
+note.note_form:
+  path: "note/form/data"
+  defaults:
+    _form: 'Drupal\note\Form\NoteForm'
+    _title: "ADD / EDIT Form"
+  requirements:
+    _permission: "TRUE"
+
+note.delete_form:
+  path: "note/form/delete/{cid}"
+  defaults:
+    _form: 'Drupal\note\Form\DeleteForm'
+    _title: "Delete Form"
+  requirements:
+    _permission: "TRUE"
